@@ -14,7 +14,7 @@ namespace Customers
     public partial class WelcomeLogin : System.Web.UI.Page
     {
         public String getLicence { get; set; }
-        private String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nai\Documents\SAB System.mdf";
+        private String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\masag\Desktop\Aviator Systems Prototype SAB\Aviator Systems Prototype SAB\SAB System.mdf;Integrated Security=True";
         public DataSet ds = new DataSet();
         public SqlDataReader dr;
         private SqlDataAdapter adapter;
@@ -38,7 +38,7 @@ namespace Customers
             if (dt.Rows.Count == 1)
             {
                 Session.Add("username", LoginCustomer.UserName);
-                getLicence = Session["username"].ToString();
+                //getLicence = Session["username"].ToString();
                 //getLicence = LoginCustomer.ClientID;
                 
                 Response.Redirect("Orders.aspx");

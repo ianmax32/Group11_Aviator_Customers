@@ -15,15 +15,6 @@ namespace Customers
     {
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -33,6 +24,24 @@ namespace Customers
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
         /// RadioButtonList1 control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,33 @@ namespace Customers
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+
+        /// <summary>
+        /// Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label;
+
+        /// <summary>
+        /// Calender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar Calender1;
+
+        /// <summary>
+        /// label5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label5;
 
         /// <summary>
         /// Label2 control.
@@ -78,24 +114,6 @@ namespace Customers
         protected global::System.Web.UI.WebControls.TextBox textBoxSize;
 
         /// <summary>
-        /// Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label;
-
-        /// <summary>
-        /// Calender1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calender1;
-
-        /// <summary>
         /// btnOrder control.
         /// </summary>
         /// <remarks>
@@ -105,13 +123,13 @@ namespace Customers
         protected global::System.Web.UI.WebControls.Button btnOrder;
 
         /// <summary>
-        /// label5 control.
+        /// ListBoxOrderSummary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label5;
+        protected global::System.Web.UI.WebControls.ListBox ListBoxOrderSummary;
 
         /// <summary>
         /// btnDone control.

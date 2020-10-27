@@ -67,6 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SAB System.mdf" />
+    <Content Include="App_Data\SAB System_log.ldf">
+      <DependentUpon>SAB System.mdf</DependentUpon>
+    </Content>
+    <Content Include="download.png" />
+    <Content Include="logo.png" />
     <Content Include="Orders.aspx" />
     <Content Include="sab.jpg" />
     <Content Include="sab2.jxr" />

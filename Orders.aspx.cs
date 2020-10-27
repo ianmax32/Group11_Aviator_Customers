@@ -11,7 +11,7 @@ namespace Customers
 {
     public partial class Orders : System.Web.UI.Page
     {
-        private String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nai\Documents\SAB System.mdf";
+        private String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\masag\Desktop\Aviator Systems Prototype SAB\Aviator Systems Prototype SAB\SAB System.mdf;Integrated Security=True";
         private SqlConnection conn;
         private DataSet ds;
         private SqlDataAdapter adapter;
@@ -19,10 +19,12 @@ namespace Customers
         protected void Page_Load(object sender, EventArgs e)
         {
             label5.Visible = false;
-            Calender1.SelectedDate = DateTime.Today;
+            //Calender1.SelectedDate = DateTime.Today;
             if (Session["username"] == null) {
                 Response.Redirect("welcomeLogin.aspx");
             }
+            if (!Page.IsPostBack)
+                Calender1.SelectedDate = DateTime.Now.Date;
         }
 
         protected void btnOrder_Click(object sender, EventArgs e)
@@ -47,9 +49,10 @@ namespace Customers
                 adapter.Fill(dt);
 
                 ordersNumber = dt.Rows.Count;
+                ListBoxOrderSummary.Items.Add(ordersNumber++ + " " + RadioButtonList1.SelectedValue + " " + textBoxSize.Text + "   " +textBoxAmount.Text + " " +orderDate.Date);
 
                 conn.Open();
-                adapter.InsertCommand = new SqlCommand("insert into order_request values('" + ordersNumber++ + "','" + RadioButtonList1.SelectedValue + "','" + int.Parse(textBoxSize.Text) + "','" + int.Parse(textBoxAmount.Text)+ "','" + orderDate + "','" + logedUser.getLicence + "');", conn);
+                adapter.InsertCommand = new SqlCommand("insert into order_request values('" + ordersNumber++ + "','" + RadioButtonList1.SelectedValue + "','" + int.Parse(textBoxSize.Text) + "','" + int.Parse(textBoxAmount.Text)+ "','" + orderDate + "','" + Session["username"].ToString() + "');", conn);
                 adapter.InsertCommand.ExecuteNonQuery();
                 conn.Close();
             }
@@ -66,6 +69,11 @@ namespace Customers
             WelcomeLogin login = new WelcomeLogin();
             Response.Redirect("WelcomeLogin.aspx");
             Response.Clear();
+        }
+
+        protected void Calender1_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

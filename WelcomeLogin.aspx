@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="padding: 10px; margin-left: 40px; margin-right: 40px; margin-top: 20px; background-image: url('South-African-Breweries-1024x683.jpg');">
+        <div style="padding: 10px; margin-left: 40px; margin-right: 40px; margin-top: 20px; background-image: none; background-color: #666699; color: #000000;">
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="XX-Large" Text="South African Breweries"></asp:Label>
             <br />
             <br />
